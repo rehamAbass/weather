@@ -1,0 +1,46 @@
+body{
+    background-color:lightskyblue;
+}
+#cityInput{
+    left:90px;
+    background-color:gainsboro;
+    border-radius: 15px;
+    border:hotpink;
+    color: crimson;
+    position: flex;
+    max-width: 650px;
+    height:70px;
+}
+
+#search{
+background-color: hotpink;
+width: 100px;
+height:70px;
+position: flex;
+border-radius: 15px;
+border:lavender;
+}
+.add{
+    border-radius: 70%;
+    background-color:green;
+}
+.remove{
+    border-radius: 70%;
+    background-color:lightcoral;
+}
+.cities{
+    display: grid;
+    grid-template-columns: auto;
+    /* grid-auto-flow: row; */
+}
+.city{
+    background-color:greenyellow;
+    margin:10px;
+    width:150px;
+    max-height: 200px;
+}
+
+img{
+    width:120px;
+    height: 120px;
+}
