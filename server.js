@@ -7,7 +7,13 @@ var request = require('request')
 var mongoose = require('mongoose')
 const api = require('./server/routes/api')
 var app = express()
-mongoose.connect('mongodb://localhost/weather')
+// mongoose.connect('mongodb://localhost/weather')
+
+
+mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/weather');
+
+
+
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'dist'))) 
@@ -32,8 +38,10 @@ let city ='London'
 // })
 //==============================================================================
 
-const port = 9000
-app.listen(port, function() {
-    console.log(`Server up and running on port ${port}`)
+
+const PORT = 8080
+
+app.listen(process.env.PORT || PORT, function() {
+    console.log(`Server up and running on port ${PORT}`)
 })
 //==============================================================================
